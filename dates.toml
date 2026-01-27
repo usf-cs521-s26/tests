@@ -1,0 +1,16 @@
+[lab01]
+
+[[lab01.dates]]
+suffix = "due"
+date = "2026-01-30"
+percentage = 1.0
+
+[[lab01.dates]]
+suffix = "1week"
+date = "2026-02-06"
+percentage = 0.75
+
+[[lab01.dates]]
+suffix = "super-late"
+date = "2026-05-14"
+percentage = 0.5

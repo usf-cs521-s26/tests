@@ -1,0 +1,53 @@
+[[tests]]
+name = "0.txt"
+input = ["./$project", "-f" , "$project_tests/0"]
+expected = """
+$project_tests/0/0.txt
+$project_tests/0/1/1.txt
+$project_tests/0/1/2/2.txt
+"""
+rubric = 13
+
+[[tests]]
+name = "hidden"
+input = ["./$project", "-fh", "$project_tests/0"]
+expected = """
+$project_tests/0/.0.txt
+$project_tests/0/0.txt
+$project_tests/0/1/1.txt
+$project_tests/0/1/2/2.txt
+"""
+rubric = 13
+
+[[tests]]
+name = "recursion"
+input = ["./$project", "-d", "$project_tests/0"]
+expected = """
+$project_tests/0/1/2
+$project_tests/0/1
+"""
+rubric = 13
+
+[[tests]]
+name = "limit"
+input = ["./$project", "-dl", "1", "$project_tests/0"]
+expected = """
+$project_tests/0/1
+"""
+rubric = 13
+
+[[tests]]
+name = "exact"
+input = ["./$project", "-e", "$project_tests/", "0"]
+expected = """
+$project_tests/0
+"""
+rubric = 13
+
+[[tests]]
+name = "contents"
+input = ["./$project", "-c", "foo", "$project_tests/0"]
+expected = """
+$project_tests/0/0.txt
+"""
+rubric = 15
