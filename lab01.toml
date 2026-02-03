@@ -1,0 +1,5 @@
+[[tests]]
+name = "hello"
+input = ["./$project"]
+expected = "Hello, CS 521!"
+rubric = 100
