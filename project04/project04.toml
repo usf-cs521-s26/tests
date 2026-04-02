@@ -60,6 +60,12 @@ rubric = 10
 
 [[tests]]
 name = "11"
-input = ["./$project", "-e", "0b11010011 & 211", "-b", "16"]
-expected = "0x000000d3"
-rubric = 10
+input = ["./$project", "-u", "-b", "10", "-e", "0-1"]
+expected = "4294967295"
+rubric = 5
+
+[[tests]]
+name = "12"
+input = ["./$project", "-b", "10", "-e", "0-1"]
+expected = "-1"
+rubric = 5
